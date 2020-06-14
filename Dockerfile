@@ -1,9 +1,9 @@
 FROM python:3.6-jessie
 
-WORKDIR /opt
+WORKDIR /
 
-ADD / /opt
+ADD / /
 
 # RUN pip install -r requirements.txt
 
-ENTRYPOINT ["python", "-u", "opt/main.py", "6" ]
+ENTRYPOINT ["python", "-u", "main.py", "6" ]
