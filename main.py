@@ -3,7 +3,7 @@ import sys
 
 def main(arg):
     for i in range(arg):
-        print(f"{i} {i**2}")
+        print(str(i) + ' ' + str(i * i))
 
 
 if __name__ == "__main__":
