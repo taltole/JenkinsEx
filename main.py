@@ -1,10 +1,11 @@
 import sys
 
 
-def func(arg):
+def main(arg):
     for i in range(arg):
-        print(f'{i} {i**3}')
+        print(f'{i} {i**2}')
 
 
-arg = int(sys.argv[1])
-func(arg)
+if __name__ == "__main":
+    arg = int(sys.argv[1])
+    main(arg)
