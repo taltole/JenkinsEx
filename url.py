@@ -1,18 +1,16 @@
+from urllib.request import Request, urlopen
 import sys
-import urllib.request as ur
 
 
 def main():
-    args = sys.argv[1:]
-    urls = args[0].split(',')
+
+    urls = sys.argv[1]
+    urls = urls.split(',')
+
     for url in urls:
-        try:
-            with ur.urlopen(url) as response:
-                html = response.read()
-                print(html)
-        except ValueError:
-            print("Please provide valid urls")
-            sys.exit(0)
+        req = Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+        webpage = urlopen(req).read()
+        print(webpage)
 
 
 if __name__ == '__main__':
