@@ -1,8 +1,4 @@
-sklearn
-pandas
-numpy
-requests
-BeautifulSoup
-selenium 
-flask_script 
-xgboost
+selenium
+flask_script
+urllib.request
+
