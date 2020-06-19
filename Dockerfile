@@ -6,4 +6,6 @@ ADD / /opt
 
 RUN pip install -r requirements.txt
 
+ENV URLS=$param
+
 ENTRYPOINT ["python", "-u", "/opt/url.py", "$param" ]
