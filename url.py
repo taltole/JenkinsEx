@@ -1,5 +1,5 @@
 import sys
-import urllib.request
+import urllib.request as ur
 
 
 def main():
@@ -7,7 +7,9 @@ def main():
     urls = args[0].split(',')
     for url in urls:
         try:
-            print(urllib.request.urlopen(url).read())
+            with ur.urlopen(url) as response:
+                html = response.read()
+                print(html)
         except ValueError:
             print("Please provide valid urls")
             sys.exit(0)
