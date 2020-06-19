@@ -1,4 +1,4 @@
 selenium
 flask_script
-urllib.request
+urllib
 
